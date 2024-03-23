@@ -1,6 +1,8 @@
+import { ClerkProvider, auth, useUser } from '@clerk/nextjs'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +16,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const user = useUser;
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <nav >
+            <Navbar user={user} />
+          </nav>
+          {children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

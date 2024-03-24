@@ -17,7 +17,8 @@
 }
 
 body {
-  background: rgb(239 246 255 / var(--tw-bg-opacity));
+  background: #000000;
+  color: #e9ecef;
 }
 
 @layer utilities {

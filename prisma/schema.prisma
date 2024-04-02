@@ -18,6 +18,8 @@ model User {
   email            String        @unique
   name             String
   username         String        @unique
+  heading          String
+  description      String
   links            Link[]
   testimonialLinks Testimonial[]
 }

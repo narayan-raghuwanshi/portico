@@ -4,6 +4,8 @@ CREATE TABLE "User" (
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "username" TEXT NOT NULL,
+    "heading" TEXT NOT NULL,
+    "description" TEXT NOT NULL,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );

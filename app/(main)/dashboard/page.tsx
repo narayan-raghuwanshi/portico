@@ -20,6 +20,8 @@ export type UserData = {
     name: string,
     email: string,
     username: string,
+    heading: string,
+    description: string,
 }
 
 const Dashboard = () => {
@@ -74,9 +76,9 @@ const Dashboard = () => {
 
     if (!userData) {
         return (
-            <div className='flex justify-center pt-16 md:pt-32 lg:pt-44 px-8'>
+            <div className='flex justify-center px-8'>
                 <div>
-                    <div className='flex flex-col space-y-2 md:space-y-4 items-center text-center'>
+                    <div className='flex flex-col space-y-2 md:space-y-4 items-center text-center pt-24'>
                         <p className='text-3xl md:text-6xl font-semibold text-[#f8f9fa]'>Get your username.</p>
                         <p className='text-[#adb5bd] max-w-4xl text-sm md:text-lg'>Think of a unique username. Remember, it's what people will use to find your portfolio online. So, make sure it stands out and represents you well.</p>
                     </div>
@@ -93,7 +95,7 @@ const Dashboard = () => {
     }
 
     return (
-        <div className='flex justify-center pt-16 px-8'>
+        <div className='flex justify-center px-8'>
             <div>
                 <div className='flex flex-col space-y-2 md:space-y-4 items-center text-center'>
                     <div>

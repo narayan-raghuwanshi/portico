@@ -25,12 +25,11 @@ model User {
 }
 
 model Link {
-  id          Int    @id @default(autoincrement())
-  title       String
-  href        String
-  description String
-  postedBy    User   @relation(fields: [userId], references: [id])
-  userId      Int
+  id       Int    @id @default(autoincrement())
+  title    String
+  href     String
+  postedBy User   @relation(fields: [userId], references: [id])
+  userId   Int
 }
 
 model Testimonial {

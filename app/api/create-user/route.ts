@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/prisma/client";
+
+
 export async function POST(req: NextRequest, res: NextResponse) {
   const body = await req.json();
   if (!body)
@@ -31,8 +33,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
       email:body.email,
       name:body.name,
       username:body.username,
-      heading:"Narayan",
-      description:"Web developer",
+      heading:"Heading",
+      description:"Description",
     },
   });
 
